@@ -64,8 +64,8 @@ all: main-build
 main-build: 8_SuspendingATask.elf secondary-outputs
 
 # Tool invocations
-8_SuspendingATask.elf 8_SuspendingATask.map: $(OBJS) $(USER_OBJS) C:\Users\Shivaraj\STM32CubeIDE\workspace_1.18.1\8_SuspendingATask\STM32L4R5ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "8_SuspendingATask.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Shivaraj\STM32CubeIDE\workspace_1.18.1\8_SuspendingATask\STM32L4R5ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="8_SuspendingATask.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+8_SuspendingATask.elf 8_SuspendingATask.map: $(OBJS) $(USER_OBJS) C:\Users\Shivaraj\git\STM32L4R5_FreeRTOS\8_SuspendingATask\STM32L4R5ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "8_SuspendingATask.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Shivaraj\git\STM32L4R5_FreeRTOS\8_SuspendingATask\STM32L4R5ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="8_SuspendingATask.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

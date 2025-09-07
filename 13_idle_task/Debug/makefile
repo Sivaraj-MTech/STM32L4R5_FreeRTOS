@@ -64,8 +64,8 @@ all: main-build
 main-build: 13_idle_task.elf secondary-outputs
 
 # Tool invocations
-13_idle_task.elf 13_idle_task.map: $(OBJS) $(USER_OBJS) C:\Users\Shivaraj\STM32CubeIDE\workspace_1.18.1\13_idle_task\STM32L4R5ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "13_idle_task.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Shivaraj\STM32CubeIDE\workspace_1.18.1\13_idle_task\STM32L4R5ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="13_idle_task.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+13_idle_task.elf 13_idle_task.map: $(OBJS) $(USER_OBJS) C:\Users\Shivaraj\git\STM32L4R5_FreeRTOS\13_idle_task\STM32L4R5ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "13_idle_task.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Shivaraj\git\STM32L4R5_FreeRTOS\13_idle_task\STM32L4R5ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="13_idle_task.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

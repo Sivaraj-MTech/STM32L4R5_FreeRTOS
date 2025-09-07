@@ -64,8 +64,8 @@ all: main-build
 main-build: 1_Task_Creation.elf secondary-outputs
 
 # Tool invocations
-1_Task_Creation.elf 1_Task_Creation.map: $(OBJS) $(USER_OBJS) C:\Users\Shivaraj\STM32CubeIDE\workspace_1.18.1\1_Task_Creation\STM32L4R5ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "1_Task_Creation.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Shivaraj\STM32CubeIDE\workspace_1.18.1\1_Task_Creation\STM32L4R5ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_Task_Creation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+1_Task_Creation.elf 1_Task_Creation.map: $(OBJS) $(USER_OBJS) C:\Users\Shivaraj\git\STM32L4R5_FreeRTOS\1_Task_Creation\STM32L4R5ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "1_Task_Creation.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Shivaraj\git\STM32L4R5_FreeRTOS\1_Task_Creation\STM32L4R5ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_Task_Creation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

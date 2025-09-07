@@ -64,8 +64,8 @@ all: main-build
 main-build: 11_Executing_Task_periodically.elf secondary-outputs
 
 # Tool invocations
-11_Executing_Task_periodically.elf 11_Executing_Task_periodically.map: $(OBJS) $(USER_OBJS) C:\Users\Shivaraj\STM32CubeIDE\workspace_1.18.1\11_Executing_Task_periodically\STM32L4R5ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "11_Executing_Task_periodically.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Shivaraj\STM32CubeIDE\workspace_1.18.1\11_Executing_Task_periodically\STM32L4R5ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="11_Executing_Task_periodically.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+11_Executing_Task_periodically.elf 11_Executing_Task_periodically.map: $(OBJS) $(USER_OBJS) C:\Users\Shivaraj\git\STM32L4R5_FreeRTOS\11_Executing_Task_periodically\STM32L4R5ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "11_Executing_Task_periodically.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Shivaraj\git\STM32L4R5_FreeRTOS\11_Executing_Task_periodically\STM32L4R5ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="11_Executing_Task_periodically.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
